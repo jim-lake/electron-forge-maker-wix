@@ -35,6 +35,6 @@ export type MakerWixConfig = Omit<MSICreatorOptions, 'appDirectory' | 'outputDir
    * Allows for the modification of the MSICreator before create is called.
    */
   beforeCreate?: (creator: MSICreator) => Promise<void> | void;
-  afterCreate?: (binaries: ReturnType<typeof MSICreator.create>) => Promise<void> | void;
-  afterCompile?: (compile: ReturnType<typeof MSICreator.compile>) => Promise<void> | void;
+  afterCreate?: (binaries: Awaited<ReturnType<MSICreator['create']>>) => Promise<void> | void;
+  afterCompile?: (compile: Awaited<ReturnType<MSICreator['compile']>>) => Promise<void> | void;
 };

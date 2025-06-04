@@ -49,6 +49,10 @@ export default class MakerWix extends MakerBase<MakerWixConfig> {
     if (this.config.beforeCreate) {
       await Promise.resolve(this.config.beforeCreate(creator));
     }
+    if (this.config.afterPreCreate) {
+      await creator.preCreate();
+      await Promise.resolve(this.config.afterPreCreate(creator));
+    }
     const binaries = await creator.create();
     if (this.config.afterCreate) {
       await Promise.resolve(this.config.afterCreate(binaries));

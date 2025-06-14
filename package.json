@@ -18,7 +18,7 @@
   "dependencies": {
     "@electron-forge/maker-base": "7.8.1",
     "chalk": "^4.0.0",
-    "electron-wix-msi": "https://github.com/jim-lake/electron-wix-msi.git#45ebec688c541ba9188e9f2190b28631a5e9b43c",
+    "electron-wix-msi": "https://github.com/jim-lake/electron-wix-msi.git#d1cea663fdc5d811c08168cec9bae05b91e181ac",
     "log-symbols": "^4.0.0",
     "parse-author": "^2.0.0",
     "semver": "^7.2.1"
